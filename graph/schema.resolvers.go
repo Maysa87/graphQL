@@ -7,6 +7,7 @@ package graph
 import (
 	"context"
 	"fmt"
+	"github.com/Maysa87/GraphQL/graph/generated"
 
 	"github.com/Maysa87/GraphQL/graph/model"
 )
@@ -22,10 +23,10 @@ func (r *queryResolver) Todos(ctx context.Context) ([]*model.Todo, error) {
 }
 
 // Mutation returns MutationResolver implementation.
-func (r *Resolver) Mutation() MutationResolver { return &mutationResolver{r} }
+func (r *Resolver) Mutation() generated.MutationResolver { return &mutationResolver{r} }
 
 // Query returns QueryResolver implementation.
-func (r *Resolver) Query() QueryResolver { return &queryResolver{r} }
+func (r *Resolver) Query() generated.QueryResolver { return &queryResolver{r} }
 
 type mutationResolver struct{ *Resolver }
 type queryResolver struct{ *Resolver }
