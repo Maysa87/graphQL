@@ -1,14 +1,14 @@
 package main
 
 import (
-	"github.com/Maysa87/GraphQL/graph/generated"
+	"github.com/Maysa87/graphQL/graph/generated"
 	"log"
 	"net/http"
 	"os"
 
 	"github.com/99designs/gqlgen/graphql/handler"
 	"github.com/99designs/gqlgen/graphql/playground"
-	"github.com/Maysa87/GraphQL/graph"
+	"github.com/Maysa87/graphQL/graph"
 )
 
 const defaultPort = "8080"
